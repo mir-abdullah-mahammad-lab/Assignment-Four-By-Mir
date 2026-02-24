@@ -92,24 +92,31 @@ function sendTo(id){
 
     btnNotapplied.replaceWith(btnKeeper)
     
-    const bringInsidehtml=document.getElementById('ContainerInterview')
+    let bringInsidehtml=document.getElementById('ContainerInterview').innerHTML
    
    
     console.log(bringInsidehtml)
     
     console.log(containerInterview)
 
+    const keepJobDiv2 = document.createElement('div')
+    keepJobDiv2.classList.add('container','mx-auto')
+    const innerht2 = document.getElementById('card-2')
+    keepJobDiv2.innerHTML = innerht2.innerHTML
+    console.log('///',keepJobDiv2.innerHTML)
+    bringInsidehtml.innerHTML = keepJobDiv2.innerHTML
     
-    const card2 = document.getElementById('card-2');
-    const inhtml = card2.innerHTML
-    console.log(inhtml)
-    if(bringInsidehtml === containerInterview){
-        console.log('noooooooooo card')
+    
+    // const card2 = document.getElementById('card-2');
+    // const inhtml = card2.innerHTML
+    // console.log(inhtml)
+    // if(bringInsidehtml === containerInterview){
+    //     console.log('noooooooooo card')
 
-        bringInsidehtml.replaceWith(inhtml)
+    //     bringInsidehtml.replaceWith(inhtml)
 
 
-    }
+    // }
 
     
 }
