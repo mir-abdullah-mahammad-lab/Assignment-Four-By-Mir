@@ -52,23 +52,25 @@
     </header>
 
     <!-- ///// inside thid section containing main board buttons post deletes all /////////// -->
-    <section class="font container mx-auto space-y-2">
+    <section id="allJobList" class="font container mx-auto space-y-2">
       <div class="title flex justify-between">
         <h2 class="font-bold text-2xl mb-[24px]">Available Jobs</h2>
-        <p> 8 Jobs</p>
+        <p id="jOfjobs"> 8 Jobs</p>
       </div>
 
         <div class="space-x-2 ">
             <button id="all" class="btn btn-soft btn-primary">All</button>
-            <button class="btn btn-soft btn-primary">Interview</button>
-            <button class="btn btn-soft btn-primary">Rejected</button>
+            <button id="interview" class="btn btn-soft btn-primary">Interview</button>
+            <button id="rejected" class="btn btn-soft btn-primary">Rejected</button>
        </div>
 
-     <div id="ultimate-container" class="ult-container border-2 ">
+     <div id="ultimate-container" class="ult-container border-2">
+
       <!-- all job details container  -->
        <div class="all-jobdetails-container flex flex-col gap-4">
-        <div class="relative aspect-auto border-6">
-            <div class="jobDetails-container  p-2 my-5 border-4">
+
+        <div id="job-card1"class="aspect-auto border-6">
+            <div class="relative jobDetails-container  p-2 my-5 border-4">
                 <div>
                     <h2 class="font font-bold">Mobile First Corp</h2>
                     <p class="font text-[#64748b]">React Native Devloper</p>
@@ -80,48 +82,233 @@
                         <li>$130,000 - $175,000</li>
                     </div>
 
-                    <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                    <button id="notApplied" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
                     <P class="my-2">Build cross-platform mobile applications using React Native. 
                         Work on products used by millions of users worldwide.</P>
 
                     <div class="intRejBtn mt-5 my-5">
-                        <button class="btn btn-soft btn-success">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button id="addInterview" class="btn btn-soft btn-success">INTERVIEW</button>
+                        <button id="addReject" class="btn btn-outline btn-error">REJECTED</button>
                     </div>
 
                 </div>
-                <div class="absolute top-13 right-2"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
+                <div class="absolute top-10 right-3"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
                 
                 
             
-            </div> <!--jobDetails-container-->
+            </div> 
         </div>
 
         <!-- ---------------------container-2 ----------------- -->
-        <div class="relative">
-            <div class="jobDetails-container  p-2 my-5">
+        <div id="card-2" class="">
+            <div class="jobDetails-container relative p-2 my-5 bg-slate-200">
                 <div>
-                        <h2 class="font font-bold">Mobile First Corp</h2>
-                        <p class="font text-[#64748b]">React Native Devloper</p>
+                        <h2 class="font font-bold">WebFlow Agency</h2>
+                        <p class="font text-[#64748b]">Web Designer & Developer</p>
                         <br>
 
                         <div class="flex flex-row gap-10">
-                            <p>Remote</p>
-                            <li>Full-time</li>
-                            <li>$130,000 - $175,000</li>
+                            <p>Los Angeles, CA</p>
+                            <li>Part-time</li>
+                            <li>$80,000 - $120,000</li>
                         </div>
 
-                        <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
-                        <P class="my-2">Build cross-platform mobile applications using React Native. 
-                            Work on products used by millions of users worldwide.</P>
+                        <button id="notApplied2" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                        <P class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
 
                         <div class="intRejBtn mt-5 my-5">
-                            <button class="btn btn-soft btn-success">INTERVIEW</button>
+                            <button onclick="sendTo('interview-2')" id="interview-2" class="btn btn-soft btn-success">INTERVIEW</button>
                             <button class="btn btn-outline btn-error">REJECTED</button>
                         </div>
 
                 </div>
-                <div class="absolute top-13 right-2">
+                <div class="absolute top-10 right-3">
+                    <button class="btn btn-neutral btn-outline rounded-full p-2">
+                    <i class="fa-regular   fa-trash-can"></i>
+                    </button>
+                </div>
+                    
+            </div> <!--jobDetails-container-->
+       </div>
+        <!-- ---------------------container-2 ----------------- -->
+        <div id="card-2" class="">
+            <div class="jobDetails-container relative p-2 my-5 bg-slate-200">
+                <div>
+                        <h2 class="font font-bold">WebFlow Agency</h2>
+                        <p class="font text-[#64748b]">Web Designer & Developer</p>
+                        <br>
+
+                        <div class="flex flex-row gap-10">
+                            <p>Los Angeles, CA</p>
+                            <li>Part-time</li>
+                            <li>$80,000 - $120,000</li>
+                        </div>
+
+                        <button id="notApplied2" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                        <P class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
+
+                        <div class="intRejBtn mt-5 my-5">
+                            <button onclick="sendTo('interview-2')" id="interview-2" class="btn btn-soft btn-success">INTERVIEW</button>
+                            <button class="btn btn-outline btn-error">REJECTED</button>
+                        </div>
+
+                </div>
+                <div class="absolute top-10 right-3">
+                    <button class="btn btn-neutral btn-outline rounded-full p-2">
+                    <i class="fa-regular   fa-trash-can"></i>
+                    </button>
+                </div>
+                    
+            </div> <!--jobDetails-container-->
+       </div>
+        <!-- ---------------------container-2 ----------------- -->
+        <div id="card-2" class="">
+            <div class="jobDetails-container relative p-2 my-5 bg-slate-200">
+                <div>
+                        <h2 class="font font-bold">WebFlow Agency</h2>
+                        <p class="font text-[#64748b]">Web Designer & Developer</p>
+                        <br>
+
+                        <div class="flex flex-row gap-10">
+                            <p>Los Angeles, CA</p>
+                            <li>Part-time</li>
+                            <li>$80,000 - $120,000</li>
+                        </div>
+
+                        <button id="notApplied2" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                        <P class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
+
+                        <div class="intRejBtn mt-5 my-5">
+                            <button onclick="sendTo('interview-2')" id="interview-2" class="btn btn-soft btn-success">INTERVIEW</button>
+                            <button class="btn btn-outline btn-error">REJECTED</button>
+                        </div>
+
+                </div>
+                <div class="absolute top-10 right-3">
+                    <button class="btn btn-neutral btn-outline rounded-full p-2">
+                    <i class="fa-regular   fa-trash-can"></i>
+                    </button>
+                </div>
+                    
+            </div> <!--jobDetails-container-->
+       </div>
+        <!-- ---------------------container-2 ----------------- -->
+        <div id="card-2" class="">
+            <div class="jobDetails-container relative p-2 my-5 bg-slate-200">
+                <div>
+                        <h2 class="font font-bold">WebFlow Agency</h2>
+                        <p class="font text-[#64748b]">Web Designer & Developer</p>
+                        <br>
+
+                        <div class="flex flex-row gap-10">
+                            <p>Los Angeles, CA</p>
+                            <li>Part-time</li>
+                            <li>$80,000 - $120,000</li>
+                        </div>
+
+                        <button id="notApplied2" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                        <P class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
+
+                        <div class="intRejBtn mt-5 my-5">
+                            <button onclick="sendTo('interview-2')" id="interview-2" class="btn btn-soft btn-success">INTERVIEW</button>
+                            <button class="btn btn-outline btn-error">REJECTED</button>
+                        </div>
+
+                </div>
+                <div class="absolute top-10 right-3">
+                    <button class="btn btn-neutral btn-outline rounded-full p-2">
+                    <i class="fa-regular   fa-trash-can"></i>
+                    </button>
+                </div>
+                    
+            </div> <!--jobDetails-container-->
+       </div>
+        <!-- ---------------------container-2 ----------------- -->
+        <div id="card-2" class="">
+            <div class="jobDetails-container relative p-2 my-5 bg-slate-200">
+                <div>
+                        <h2 class="font font-bold">WebFlow Agency</h2>
+                        <p class="font text-[#64748b]">Web Designer & Developer</p>
+                        <br>
+
+                        <div class="flex flex-row gap-10">
+                            <p>Los Angeles, CA</p>
+                            <li>Part-time</li>
+                            <li>$80,000 - $120,000</li>
+                        </div>
+
+                        <button id="notApplied2" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                        <P class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
+
+                        <div class="intRejBtn mt-5 my-5">
+                            <button onclick="sendTo('interview-2')" id="interview-2" class="btn btn-soft btn-success">INTERVIEW</button>
+                            <button class="btn btn-outline btn-error">REJECTED</button>
+                        </div>
+
+                </div>
+                <div class="absolute top-10 right-3">
+                    <button class="btn btn-neutral btn-outline rounded-full p-2">
+                    <i class="fa-regular   fa-trash-can"></i>
+                    </button>
+                </div>
+                    
+            </div> <!--jobDetails-container-->
+       </div>
+        <!-- ---------------------container-2 ----------------- -->
+        <div id="card-2" class="">
+            <div class="jobDetails-container relative p-2 my-5 bg-slate-200">
+                <div>
+                        <h2 class="font font-bold">WebFlow Agency</h2>
+                        <p class="font text-[#64748b]">Web Designer & Developer</p>
+                        <br>
+
+                        <div class="flex flex-row gap-10">
+                            <p>Los Angeles, CA</p>
+                            <li>Part-time</li>
+                            <li>$80,000 - $120,000</li>
+                        </div>
+
+                        <button id="notApplied2" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                        <P class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
+
+                        <div class="intRejBtn mt-5 my-5">
+                            <button onclick="sendTo('interview-2')" id="interview-2" class="btn btn-soft btn-success">INTERVIEW</button>
+                            <button class="btn btn-outline btn-error">REJECTED</button>
+                        </div>
+
+                </div>
+                <div class="absolute top-10 right-3">
+                    <button class="btn btn-neutral btn-outline rounded-full p-2">
+                    <i class="fa-regular   fa-trash-can"></i>
+                    </button>
+                </div>
+                    
+            </div> <!--jobDetails-container-->
+       </div>
+        <!-- ---------------------container-2 ----------------- -->
+        <div id="card-2" class="">
+            <div class="jobDetails-container relative p-2 my-5 bg-slate-200">
+                <div>
+                        <h2 class="font font-bold">WebFlow Agency</h2>
+                        <p class="font text-[#64748b]">Web Designer & Developer</p>
+                        <br>
+
+                        <div class="flex flex-row gap-10">
+                            <p>Los Angeles, CA</p>
+                            <li>Part-time</li>
+                            <li>$80,000 - $120,000</li>
+                        </div>
+
+                        <button id="notApplied2" class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
+                        <P class="my-2">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</P>
+
+                        <div class="intRejBtn mt-5 my-5">
+                            <button onclick="sendTo('interview-2')" id="interview-2" class="btn btn-soft btn-success">INTERVIEW</button>
+                            <button class="btn btn-outline btn-error">REJECTED</button>
+                        </div>
+
+                </div>
+                <div class="absolute top-10 right-3">
                     <button class="btn btn-neutral btn-outline rounded-full p-2">
                     <i class="fa-regular   fa-trash-can"></i>
                     </button>
@@ -130,189 +317,11 @@
             </div> <!--jobDetails-container-->
        </div>
 
-       <!-- -------------------cotainer-3 ----------------->
-        <div class="relative">
+    
 
-
-            <div class="jobDetails-container  p-2 my-5">
-                    <div>
-                        <h2 class="font font-bold">Mobile First Corp</h2>
-                        <p class="font text-[#64748b]">React Native Devloper</p>
-                        <br>
-
-                        <div class="flex flex-row gap-10">
-                            <p>Remote</p>
-                            <li>Full-time</li>
-                            <li>$130,000 - $175,000</li>
-                        </div>
-
-                        <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
-                        <P class="my-2">Build cross-platform mobile applications using React Native. 
-                            Work on products used by millions of users worldwide.</P>
-
-                        <div class="intRejBtn mt-5 my-5">
-                            <button class="btn btn-soft btn-success">INTERVIEW</button>
-                            <button class="btn btn-outline btn-error">REJECTED</button>
-                        </div>
-
-                    </div>
-                    <div class="absolute top-13 right-2"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
-                    
-            </div> <!--jobDetails-container-->
-       </div>
-
-       <!-- ------------------container-4------------ -->
-         <div class="relative">
-
-
-            <div class="jobDetails-container  p-2 my-5">
-                    <div>
-                        <h2 class="font font-bold">Mobile First Corp</h2>
-                        <p class="font text-[#64748b]">React Native Devloper</p>
-                        <br>
-
-                        <div class="flex flex-row gap-10">
-                            <p>Remote</p>
-                            <li>Full-time</li>
-                            <li>$130,000 - $175,000</li>
-                        </div>
-
-                        <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
-                        <P class="my-2">Build cross-platform mobile applications using React Native. 
-                            Work on products used by millions of users worldwide.</P>
-
-                        <div class="intRejBtn mt-5 my-5">
-                            <button class="btn btn-soft btn-success">INTERVIEW</button>
-                            <button class="btn btn-outline btn-error">REJECTED</button>
-                        </div>
-
-                    </div>
-                   <div class="absolute top-13 right-2"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
-                    
-            </div> <!--jobDetails-container-->
-       </div>
-
-       <!-- ----------------------------container-5----------- -->
-         <div class="relative">
-
-
-            <div class="jobDetails-container  p-2 my-5">
-                    <div>
-                        <h2 class="font font-bold">Mobile First Corp</h2>
-                        <p class="font text-[#64748b]">React Native Devloper</p>
-                        <br>
-
-                        <div class="flex flex-row gap-10">
-                            <p>Remote</p>
-                            <li>Full-time</li>
-                            <li>$130,000 - $175,000</li>
-                        </div>
-
-                        <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
-                        <P class="my-2">Build cross-platform mobile applications using React Native. 
-                            Work on products used by millions of users worldwide.</P>
-
-                        <div class="intRejBtn mt-5 my-5">
-                            <button class="btn btn-soft btn-success">INTERVIEW</button>
-                            <button class="btn btn-outline btn-error">REJECTED</button>
-                        </div>
-
-                    </div>
-                   <div class="absolute top-13 right-2"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
-                    
-            </div> <!--jobDetails-container-->
-       </div>
-
-       <!-- -----------------------container-6------------------------- -->
-         <div class="relative">
-
-
-            <div class="jobDetails-container  p-2 my-5">
-                    <div>
-                        <h2 class="font font-bold">Mobile First Corp</h2>
-                        <p class="font text-[#64748b]">React Native Devloper</p>
-                        <br>
-
-                        <div class="flex flex-row gap-10">
-                            <p>Remote</p>
-                            <li>Full-time</li>
-                            <li>$130,000 - $175,000</li>
-                        </div>
-
-                        <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
-                        <P class="my-2">Build cross-platform mobile applications using React Native. 
-                            Work on products used by millions of users worldwide.</P>
-
-                        <div class="intRejBtn mt-5 my-5">
-                            <button class="btn btn-soft btn-success">INTERVIEW</button>
-                            <button class="btn btn-outline btn-error">REJECTED</button>
-                        </div>
-
-                    </div>
-                   <div class="absolute top-13 right-2"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
-                    
-            </div> <!--jobDetails-container-->
-       </div>
-       <!-- -----------------------container-7------------------------- -->
-         <div class="relative">
-
-
-            <div class="jobDetails-container  p-2 my-5">
-                    <div>
-                        <h2 class="font font-bold">Mobile First Corp</h2>
-                        <p class="font text-[#64748b]">React Native Devloper</p>
-                        <br>
-
-                        <div class="flex flex-row gap-10">
-                            <p>Remote</p>
-                            <li>Full-time</li>
-                            <li>$130,000 - $175,000</li>
-                        </div>
-
-                        <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
-                        <P class="my-2">Build cross-platform mobile applications using React Native. 
-                            Work on products used by millions of users worldwide.</P>
-
-                        <div class="intRejBtn mt-5 my-5">
-                            <button class="btn btn-soft btn-success">INTERVIEW</button>
-                            <button class="btn btn-outline btn-error">REJECTED</button>
-                        </div>
-
-                    </div>
-                   <div class="absolute top-13 right-2"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
-                    
-            </div> <!--jobDetails-container-->
-       </div>
-       <!-- -----------------------container-8------------------------- -->
-         <div class="relative">
-
-
-            <div class="jobDetails-container  p-2 my-5">
-                    <div>
-                        <h2 class="font font-bold">Mobile First Corp</h2>
-                        <p class="font text-[#64748b]">React Native Devloper</p>
-                        <br>
-
-                        <div class="flex flex-row gap-10">
-                            <p>Remote</p>
-                            <li>Full-time</li>
-                            <li>$130,000 - $175,000</li>
-                        </div>
-
-                        <button class="btn btn-soft btn-primary mt-3">NOT APPLIED</button>
-                        <P class="my-2">Build cross-platform mobile applications using React Native. 
-                            Work on products used by millions of users worldwide.</P>
-
-                        <div class="intRejBtn mt-5 my-5">
-                            <button class="btn btn-soft btn-success">INTERVIEW</button>
-                            <button class="btn btn-outline btn-error">REJECTED</button>
-                        </div>
-
-                    </div>
-                   <div class="absolute top-13 right-2"><button class="btn btn-neutral btn-outline rounded-full p-2"><i class="fa-regular fa-trash-can"></i></button></div>
-                    
-            </div> <!--jobDetails-container-->
-       </div>
+      
+       
+      
 
       
     </div><!-- ultimateContainerEnd-->
@@ -322,9 +331,9 @@
        
     </section>
 
-
-    <section class="whenEmptyContainer">
-        <div class="container mx-auto h-[400px] aspect-auto flex items-center justify-center">
+             <!-- this is Interview container -->
+    <section id="ContainerInterview" class="hidden container mx-auto">
+        <div id="cardOfInterview"  class="h-[400px] aspect-auto flex items-center justify-center">
             <div class="flex flex-col items-center justify-between ">
                 <div class="m-5">
                     <img src="./jobs.png" alt="">
@@ -335,9 +344,28 @@
         </div>
     </section>
 
+    <!-- this is rejected container -->
+    <section id="ContainerRejected" class="hidden container mx-auto">
+        <div class=" h-[400px] aspect-auto flex items-center justify-center">
+            <div class="flex flex-col items-center justify-between ">
+                <div class="m-5">
+                    <img src="./jobs.png" alt="">
+                </div>
+                <h2 class="text-2xl">No Jobs available</h2>
+                <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+
 
 
     <script src="./int-act.js"></script>
+    <script src="./inter-act1.js"></script>
+    <script src="./inter-act-2.js"></script>
 
 
 
